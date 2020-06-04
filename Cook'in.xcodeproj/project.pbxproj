@@ -13,6 +13,8 @@
 		0A2C4A2E2488F54B00CFB562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2C4A2D2488F54B00CFB562 /* Assets.xcassets */; };
 		0A2C4A312488F54B00CFB562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2C4A302488F54B00CFB562 /* Preview Assets.xcassets */; };
 		0A2C4A342488F54B00CFB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2C4A322488F54B00CFB562 /* LaunchScreen.storyboard */; };
+		FC7311B52489291500F99BF7 /* Michella Garden.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC7311B42489291400F99BF7 /* Michella Garden.otf */; };
+		FC7311B9248967F600F99BF7 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7311B8248967F600F99BF7 /* NavBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0A2C4A302488F54B00CFB562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A2C4A332488F54B00CFB562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A2C4A352488F54B00CFB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7311B42489291400F99BF7 /* Michella Garden.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Michella Garden.otf"; sourceTree = "<group>"; };
+		FC7311B8248967F600F99BF7 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = "/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook'in/NavBar.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,14 @@
 		0A2C4A262488F54900CFB562 /* Cook'in */ = {
 			isa = PBXGroup;
 			children = (
+				FC7311B8248967F600F99BF7 /* NavBar.swift */,
 				0A2C4A272488F54900CFB562 /* AppDelegate.swift */,
 				0A2C4A292488F54900CFB562 /* SceneDelegate.swift */,
 				0A2C4A2B2488F54900CFB562 /* ContentView.swift */,
 				0A2C4A2D2488F54B00CFB562 /* Assets.xcassets */,
 				0A2C4A322488F54B00CFB562 /* LaunchScreen.storyboard */,
 				0A2C4A352488F54B00CFB562 /* Info.plist */,
+				FC7311B42489291400F99BF7 /* Michella Garden.otf */,
 				0A2C4A2F2488F54B00CFB562 /* Preview Content */,
 			);
 			path = "Cook'in";
@@ -135,6 +141,7 @@
 			files = (
 				0A2C4A342488F54B00CFB562 /* LaunchScreen.storyboard in Resources */,
 				0A2C4A312488F54B00CFB562 /* Preview Assets.xcassets in Resources */,
+				FC7311B52489291500F99BF7 /* Michella Garden.otf in Resources */,
 				0A2C4A2E2488F54B00CFB562 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7311B9248967F600F99BF7 /* NavBar.swift in Sources */,
 				0A2C4A282488F54900CFB562 /* AppDelegate.swift in Sources */,
 				0A2C4A2A2488F54900CFB562 /* SceneDelegate.swift in Sources */,
 				0A2C4A2C2488F54900CFB562 /* ContentView.swift in Sources */,

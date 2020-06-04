@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Cook&apos;in.xcodeproj">
+      location = "group:/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook&apos;in/NavBar.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook&apos;in/home.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook&apos;in/Flower Power Personal Use.ttf">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
