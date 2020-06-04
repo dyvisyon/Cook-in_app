@@ -12,24 +12,25 @@ struct NavBar: View {
     @State var pageSelected = 0
     
     var body: some View {
+        
         TabView(selection: $pageSelected) {
             ContentView()
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "house").font(.system(size: 18))
             }.tag(0)
             Text("Recettes")
                 .tabItem {
-                    Image(systemName: "book")
+                    Image(systemName: "book").font(.system(size: 18))
             }.tag(1)
             Text("Add")
                 .tabItem {
-                    Image(systemName: "plus.circle")
+                    Image(systemName: "plus.circle").font(.system(size: 18))
             }.tag(2)
             Text("Paramètres")
                 .tabItem {
-                    Image(systemName: "slider.horizontal.3")
+                    Image(systemName: "slider.horizontal.3").font(.system(size: 18))
             }.tag(3)
-        }
+        } .accentColor(Color(red: 0.941, green: 0.502, blue: 0.447))
     }
 }
 

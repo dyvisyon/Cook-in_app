@@ -35,6 +35,7 @@ struct ContentView: View {
                 }.zIndex(1)
             }
             Spacer()
+            
             VStack {
                 Image("notebook_rond")
                 .resizable()
@@ -55,7 +56,7 @@ struct ContentView: View {
                 .bold()
             }
             Spacer()
-        }
+        } .padding(.bottom, 30)
 
     }
 }
