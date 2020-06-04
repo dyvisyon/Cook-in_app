@@ -15,6 +15,8 @@
 		0A2C4A342488F54B00CFB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2C4A322488F54B00CFB562 /* LaunchScreen.storyboard */; };
 		FC7311B52489291500F99BF7 /* Michella Garden.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC7311B42489291400F99BF7 /* Michella Garden.otf */; };
 		FC7311B9248967F600F99BF7 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7311B8248967F600F99BF7 /* NavBar.swift */; };
+		FC7311BB2489789E00F99BF7 /* CreerUneRecette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7311BA2489789E00F99BF7 /* CreerUneRecette.swift */; };
+		FC7311BD24897F9800F99BF7 /* MesRecettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7311BC24897F9800F99BF7 /* MesRecettes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0A2C4A352488F54B00CFB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7311B42489291400F99BF7 /* Michella Garden.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Michella Garden.otf"; sourceTree = "<group>"; };
 		FC7311B8248967F600F99BF7 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = "/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook'in/NavBar.swift"; sourceTree = "<absolute>"; };
+		FC7311BA2489789E00F99BF7 /* CreerUneRecette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreerUneRecette.swift; path = "/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook'in/CreerUneRecette.swift"; sourceTree = "<absolute>"; };
+		FC7311BC24897F9800F99BF7 /* MesRecettes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MesRecettes.swift; path = "/Users/ivann/Dropbox/coding_factory/cours/18_COOKIN/Cook-in_app/Cook'in/MesRecettes.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		0A2C4A262488F54900CFB562 /* Cook'in */ = {
 			isa = PBXGroup;
 			children = (
+				FC7311BC24897F9800F99BF7 /* MesRecettes.swift */,
+				FC7311BA2489789E00F99BF7 /* CreerUneRecette.swift */,
 				FC7311B8248967F600F99BF7 /* NavBar.swift */,
 				0A2C4A272488F54900CFB562 /* AppDelegate.swift */,
 				0A2C4A292488F54900CFB562 /* SceneDelegate.swift */,
@@ -155,8 +161,10 @@
 			files = (
 				FC7311B9248967F600F99BF7 /* NavBar.swift in Sources */,
 				0A2C4A282488F54900CFB562 /* AppDelegate.swift in Sources */,
+				FC7311BD24897F9800F99BF7 /* MesRecettes.swift in Sources */,
 				0A2C4A2A2488F54900CFB562 /* SceneDelegate.swift in Sources */,
 				0A2C4A2C2488F54900CFB562 /* ContentView.swift in Sources */,
+				FC7311BB2489789E00F99BF7 /* CreerUneRecette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

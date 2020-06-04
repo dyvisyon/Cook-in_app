@@ -18,11 +18,11 @@ struct NavBar: View {
                 .tabItem {
                     Image(systemName: "house").font(.system(size: 18))
             }.tag(0)
-            Text("Recettes")
+            Text("Mes recettes")
                 .tabItem {
                     Image(systemName: "book").font(.system(size: 18))
             }.tag(1)
-            Text("Add")
+            CreerUneRecette()
                 .tabItem {
                     Image(systemName: "plus.circle").font(.system(size: 18))
             }.tag(2)
