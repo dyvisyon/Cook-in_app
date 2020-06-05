@@ -20,7 +20,7 @@ struct NavBar: View {
                 .tabItem {
                     Image(systemName: "house").font(.system(size: 18))
             }.tag(0)
-            Text("Mes recettes")
+            MesRecettes()
                 .tabItem {
                     Image(systemName: "book").font(.system(size: 18))
             }.tag(1)
