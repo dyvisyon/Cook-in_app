@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 ZStack {
                     HStack {
                         Image("bandeau")
@@ -29,20 +30,20 @@ struct ContentView: View {
                     }.zIndex(1)
                 }
                 Spacer()
-                //HStack {
-                     VStack {
-                        NavigationLink(destination: CreerUneRecette()){
-                            Image("notebook_rond")
-                                .resizable()
-                                .frame(width: 110, height: 110, alignment: .center)
-                                .clipShape(Circle())
-                        }
+                
+                VStack {
+                    NavigationLink(destination: CreerUneRecette()){
+                        Image("notebook_rond")
+                            .resizable()
+                            .frame(width: 110, height: 110, alignment: .center)
+                            .clipShape(Circle())
+                    }
                     
                     Text("Créer une recette")
                         .bold()
-                        }
-               // }
+                }
                 .padding(.bottom, 40)
+                
                 VStack {
                     NavigationLink(destination: MesRecettes()) {
                         Image("pancakes_rond")
@@ -50,10 +51,12 @@ struct ContentView: View {
                             .frame(width: 110, height: 110, alignment: .center)
                             .clipShape(Circle())
                     }
+                    
                     Text("Mes recettes")
                         .bold()
                 }
                 Spacer()
+                
             }
             .navigationBarTitle(
                 Text("")
