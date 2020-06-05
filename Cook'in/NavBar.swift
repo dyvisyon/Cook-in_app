@@ -10,7 +10,9 @@ import SwiftUI
 struct NavBar: View {
     
     @State var pageSelected = 0
-    
+    init() {
+        UITabBar.appearance().barTintColor = UIColor.white
+    }
     var body: some View {
         
         TabView(selection: $pageSelected) {

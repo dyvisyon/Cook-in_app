@@ -13,12 +13,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                VStack {
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 145, height: 45, alignment: .center)
-                }
-                .padding(.bottom, 20)
                 ZStack {
                     HStack {
                         Image("bandeau")
@@ -32,21 +26,22 @@ struct ContentView: View {
                             .shadow(radius: 10)
                             .padding()
                             .foregroundColor(.white)
-                        
                     }.zIndex(1)
                 }
-                                Spacer()
-                VStack {
-                    NavigationLink(destination: CreerUneRecette()) {
-                        Image("notebook_rond")
-                            .resizable()
-                            .frame(width: 110, height: 110, alignment: .center)
-                            .clipShape(Circle())
-                            .padding(.top, 20)
-                    }
+                Spacer()
+                //HStack {
+                     VStack {
+                        NavigationLink(destination: CreerUneRecette()){
+                            Image("notebook_rond")
+                                .resizable()
+                                .frame(width: 110, height: 110, alignment: .center)
+                                .clipShape(Circle())
+                        }
+                    
                     Text("Créer une recette")
                         .bold()
-                }
+                        }
+               // }
                 .padding(.bottom, 40)
                 VStack {
                     NavigationLink(destination: MesRecettes()) {
@@ -59,15 +54,21 @@ struct ContentView: View {
                         .bold()
                 }
                 Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
             }
+            .navigationBarTitle(
+                Text("")
+                , displayMode: .inline)
+                .navigationBarItems(leading:
+                    HStack {
+                        Image("logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 90, height: 70, alignment: .center)
+                            .padding(UIScreen.main.bounds.size.width/4+50)
+                            .padding(.bottom, 10)
+                    }
+            )
         }
-        .navigationBarHidden(true)
-        .navigationBarTitle(Text(""))
-        .edgesIgnoringSafeArea([.top, .bottom])
     }
 }
 
