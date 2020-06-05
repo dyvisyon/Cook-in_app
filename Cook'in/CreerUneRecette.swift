@@ -64,7 +64,6 @@ struct CreerUneRecette: View {
             }
         }.navigationBarTitle("Créer une recette")
     }
-
 }
 
 struct CreerUneRecette_Previews: PreviewProvider {
