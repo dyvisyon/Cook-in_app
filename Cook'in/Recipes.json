@@ -1,0 +1,10 @@
+[
+    {
+        "title" : "pancake",
+        "category" : "En-cas",
+        "ingredients" :[ "oeuf","lait","sucre","beurre"],
+        "steps": ["melanger","chauffer","manger"]
+    }
+   
+    
+]
