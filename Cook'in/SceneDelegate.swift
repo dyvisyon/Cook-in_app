@@ -28,11 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             
-            let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            
             
             // Create the SwiftUI view that provides the window contents.
-            let contentView = NavBar().environment(\.managedObjectContext, managedObjectContext)
+            let contentView = NavBar()
             
             
             window.rootViewController = UIHostingController(rootView: contentView

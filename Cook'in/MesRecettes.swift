@@ -71,9 +71,6 @@ struct MesRecettes: View {
                     Text(item.steps[x])
                 }
                 
-                
-                    
-                
             }
         .navigationBarTitle("Mes Recettes")
         .navigationBarItems(trailing: EditButton())

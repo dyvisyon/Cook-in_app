@@ -56,16 +56,7 @@ struct CreerUneRecette: View {
                                         .foregroundColor(.red)
                                         .imageScale(.large)
                                 }
-                                
-                        
-                            }
-                            List {
-                                Section(header: Text("Liste")){
-                                    ForEach(0..<ingredientsList.count) { x in
-                                        Text(ingredientsList[x])
-                                        }
-                                }
-                                 
+                                                       
                             }
                         }
                     }
