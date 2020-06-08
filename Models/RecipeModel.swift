@@ -8,14 +8,16 @@
 
 import Foundation
 
-public class Recette: ObservableObject, Identifiable {
+public class RecipeModel: ObservableObject, Identifiable, Decodable {
     var title: String
     var category: String
     var ingredients: [String]
+    var steps: [String]
     
-    init(title: String, category: String, ingredients: [String]) {
+    init(title: String, category: String, ingredients: [String], steps: [String]) {
         self.title = title
         self.category = category
         self.ingredients = ingredients
+        self.steps = steps
     }
 }

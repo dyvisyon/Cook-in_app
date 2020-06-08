@@ -23,7 +23,7 @@ struct Model: Codable, Identifiable {
 }
 
 class Json: ObservableObject {
-    @Published var json = [Model]()
+    @Published var json = [RecipeModel]()
     
     init() {
         load()
@@ -36,7 +36,7 @@ class Json: ObservableObject {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             do {
                 if let data = data {
-                    let json = try JSONDecoder().decode([Model].self, from: data)
+                    let json = try JSONDecoder().decode([RecipeModel].self, from: data)
                     
                     DispatchQueue.main.sync {
                         self.json = json
@@ -51,10 +51,6 @@ class Json: ObservableObject {
     }
 }
 
-
-    
-    
-    
 struct MesRecettes: View {
     
     @ObservedObject var datas = Json()

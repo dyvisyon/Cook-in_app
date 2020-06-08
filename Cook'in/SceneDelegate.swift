@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             
             window.rootViewController = UIHostingController(rootView: contentView
-                .environmentObject(Recette(title: "", category: "", ingredients: [""])))
+                .environmentObject(RecipeModel(title: "", category: "", ingredients: [""], steps: [""])))
             self.window = window
             window.makeKeyAndVisible()
         }
