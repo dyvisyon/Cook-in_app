@@ -8,14 +8,32 @@
 
 import SwiftUI
 
+
 struct Recipe: View {
+    
+    @State var jsonItem: RecipeModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text(self.jsonItem.title)
+                    .font(.title)
+                Text(self.jsonItem.category)
+            }
+//            .background(/*@START_MENU_TOKEN@*/Color(red: 0.937, green: 0.498, blue: 0.447)/*@END_MENU_TOKEN@*/)
+//            .frame(width: 100, height: 50, alignment: .center)
+
+        }
+
     }
 }
 
 struct Recipe_Previews: PreviewProvider {
+    
+    @State var jsonItem: RecipeModel
+    
     static var previews: some View {
-        Recipe()
+        Recipe(jsonItem: RecipeModel(title: "Pancakes", category: "catégorie", ingredients: ["1", "2"], steps: ["1", "2"]))
     }
 }
+

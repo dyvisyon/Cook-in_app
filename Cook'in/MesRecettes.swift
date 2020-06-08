@@ -7,21 +7,6 @@
 
 import SwiftUI
 
-struct Model: Codable, Identifiable {
-    
-    enum CodingKeys: CodingKey {
-        case title
-        case category
-        case ingredients
-        case steps
-    }
-    
-    var id = UUID()
-    var title, category: String
-    var ingredients: [String]
-    var steps: [String]
-}
-
 class Json: ObservableObject {
     @Published var json = [RecipeModel]()
     
@@ -58,22 +43,29 @@ struct MesRecettes: View {
     var body: some View {
         NavigationView {
             List(datas.json) { item in
-                Text(item.title)
-                Text(item.category)
-                ForEach(0..<item.ingredients.count) { x in
-                    Text(item.ingredients[x])
+                NavigationLink(destination: Recipe(jsonItem: item)) {
+                    VStack {
+                        Text(item.title)
+                            //.font(.headline)
+                        Text(item.category)
+                            .foregroundColor(.gray)
+                        //(/*@START_MENU_TOKEN@*/Color(red: 0.937, green: 0.498, blue: 0.447)/*@END_MENU_TOKEN@*/)
+                    }
+
                 }
-                ForEach(0..<item.steps.count) { x in
-                    Text(item.steps[x])
+
+//                Text(item.category)
+//                ForEach(0..<item.ingredients.count) { x in
+//                    Text(item.ingredients[x])
                 }
+//                ForEach(0..<item.steps.count) { x in
+//                    Text(item.steps[x])
+//                }
                 
             }
         .navigationBarTitle("Mes Recettes")
-        .navigationBarItems(trailing: EditButton())
         }
     }
-    
-}
 
 struct MesRecettes_Previews: PreviewProvider {
     static var previews: some View {

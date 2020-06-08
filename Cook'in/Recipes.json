@@ -4,7 +4,12 @@
         "category" : "En-cas",
         "ingredients" :[ "oeuf","lait","sucre","beurre"],
         "steps": ["melanger","chauffer","manger"]
-    }
-   
+    },
+   {
+       "title" : "pancake2",
+       "category" : "En-cas2",
+       "ingredients" :[ "oeuf2","lait2","sucre2","beurre2"],
+       "steps": ["melanger2","chauffer2","manger2"]
+   }
     
 ]
