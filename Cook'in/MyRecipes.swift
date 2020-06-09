@@ -17,6 +17,9 @@ class Json: ObservableObject {
         
         // To remove all list separators including the actual ones:
         UITableView.appearance().separatorStyle = .none
+        
+        // To clean space above Form
+        UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
     }
     
     func load() {
@@ -44,6 +47,8 @@ class Json: ObservableObject {
 struct MyRecipes: View {
     
     @ObservedObject var datas = Json()
+    @State var categoryIndex = 0
+    var categoriesArray = ["Petit-déjeuner", "Entrée", "Plat", "Dessert", "En-cas", "Apéritif", "Boisson"]
     
     var body: some View {
         VStack {
@@ -53,6 +58,26 @@ struct MyRecipes: View {
                     .padding(.top, 20)
                     .padding(.leading, 15)
                 Spacer()
+            }
+            VStack {
+                HStack {
+//                    Picker("Selectionnez la catégorie: \(categoriesArray[categoryIndex])", selection: $categoryIndex) {
+//                        ForEach(0..<self.categoriesArray.count) {
+//                            category in
+//                            Text(self.categoriesArray[category]).tag(category)
+//                        }
+                    HStack {
+                        Form {
+                    Section {
+                            Picker(selection: $categoryIndex, label: Text("Catégorie :")){
+                                ForEach(0..<self.categoriesArray.count) { category in
+                                    Text(self.categoriesArray[category]).tag(category)
+                                }
+                        }
+                        }
+                        }
+                    }
+                }
             }
             VStack {
                 List {
@@ -65,7 +90,7 @@ struct MyRecipes: View {
                                     .foregroundColor(.gray)
                                     .padding(.leading, -2)
                             }
-                        
+                            
                         }
                     }
                     .onDelete { (indexSet) in
