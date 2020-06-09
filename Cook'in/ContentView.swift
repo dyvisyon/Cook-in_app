@@ -30,7 +30,6 @@ struct ContentView: View {
                     }.zIndex(1)
                 }
                 Spacer()
-                
                 VStack {
                     NavigationLink(destination: CreerUneRecette()){
                         Image("notebook_rond")
@@ -38,7 +37,6 @@ struct ContentView: View {
                             .frame(width: 110, height: 110, alignment: .center)
                             .clipShape(Circle())
                     }
-                    
                     Text("Créer une recette")
                         .bold()
                 }
@@ -51,15 +49,14 @@ struct ContentView: View {
                             .frame(width: 110, height: 110, alignment: .center)
                             .clipShape(Circle())
                     }
-                    
                     Text("Mes recettes")
                         .bold()
                 }
                 Spacer()
-                
             }
+            //.navigationBarHidden(true)
             .navigationBarTitle(
-                Text("")
+                Text("Home")
                 , displayMode: .inline)
                 .navigationBarItems(leading:
                     HStack {

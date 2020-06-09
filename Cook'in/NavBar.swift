@@ -28,7 +28,7 @@ struct NavBar: View {
                 .tabItem {
                     Image(systemName: "plus.circle").font(.system(size: 18))
             }.tag(2)
-            Text("Paramètres")
+            About()
                 .tabItem {
                     Image(systemName: "slider.horizontal.3").font(.system(size: 18))
             }.tag(3)
