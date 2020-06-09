@@ -9,17 +9,16 @@ import SwiftUI
 
 struct CreerUneRecette: View {
     
-    @Environment(\.managedObjectContext) var managedObjectContext
-    //@FetchRequest(fetchRequest: RecipesItem.getAllRecipesItems()) var recipesItems:FetchedResults<RecipesItem>
-    
     @State private var newRecipeItem = ""
     
     @State var titleWritten = ""
     @State var index = 0
     var categories = ["Petit-déjeuner", "Entrée", "Plat", "Dessert", "En-cas", "Apéritif", "Boisson"]
-    @State var ingredientsList = [""]
+    @State var ingredientsList:[String] = []
     @State var ingredient = ""
-    
+    @State var stepsList:[String] = []
+    @State var step = ""
+ 
     var body: some View {
         NavigationView {
             VStack {
@@ -42,57 +41,120 @@ struct CreerUneRecette: View {
                     Section(header: Text("Ingédients")) {
                         VStack {
                             HStack {
-                                TextField("Ingrédient", text: self.$ingredient)
-                                Button(action: {
-                                    guard self.ingredient != "" else {return}
-                                    let new = self.ingredient
-                                    
-                                    self.ingredientsList.append(new)
-                                    print(self.ingredientsList)
-                                    
-                                    self.ingredient = ""
-                                }) {
-                                    Image(systemName: "plus.circle.fill")
-                                        .foregroundColor(.red)
-                                        .imageScale(.large)
+                                Section {
+                                    TextField("Ingrédient", text: self.$ingredient)
+                                    Button(action: addIngredient) {
+                                        Image(systemName: "plus.circle.fill")
+                                            .foregroundColor(.red)
+                                            .imageScale(.large)
+                                    }
                                 }
-                                                       
+                            }
+                            //Display a list of ingredients in the ingredientsList after the user clicks on the button.
+                            Section {
+                                List {
+                                    ForEach(ingredientsList, id: \.self) {
+                                        Text($0)
+                                    }
+                                }
                             }
                         }
                     }
-                        
-                    
-                    /*ForEach(0..<ingredientsList.count) { x in
-                        TextField("Ingrédient", text: self.$titleWritten, onEditingChanged: { (sucess) in
-                            print("On Editing: \(sucess)")
-                        }) {
-                            print("On commit")
-                        }
-                    }
-                    Button(action: {
-                        //
-                    }) {
-                        Text("Ajouter un ingrédient supplémentaire")
-                    }*/
                     
                     Section(header: Text("Etapes")) {
-                        ForEach(0..<ingredientsList.count) { x in
-                            TextField("Etape", text: self.$titleWritten, onEditingChanged: { (sucess) in
-                                print("On Editing: \(sucess)")
-                            }) {
-                                print("On commit")
+                        VStack {
+                            HStack {
+                                Section {
+                                    TextField("Etape", text: self.$step)
+                                    Button(action: addStep) {
+                                        Image(systemName: "plus.circle.fill")
+                                            .foregroundColor(.yellow)
+                                            .imageScale(.large)
+                                    }
+                                }
+                            }
+                            Section {
+                                List {
+                                    ForEach(stepsList, id: \.self) {
+                                        Text($0)
+                                    }
+                                }
                             }
                         }
-                        Button(action: {
-                            //
-                        }) {
-                            Text("Ajouter une étape")
-                        }
+                    }
+                    Button("Enregistrer") {
+                        /*
+                        let recipeArray = ["title" : self.titleWritten, "category" : self.categories[self.index], "ingredients" : self.ingredientsList, "steps": self.stepsList] as [String : Any]
+                        
+                       do {
+                           let fileURL = try FileManager.default
+                               .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                               .appendingPathComponent("example.json")
+
+                           try JSONSerialization.data(withJSONObject: recipeArray)
+                               .write(to: fileURL)
+                        print(fileURL)
+                       } catch {
+                           print(error)
+                       }*/
+                        
+                        
+                        
+                                    
+                                    
+                        /*
+                        guard let documentDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+                        
+                        let fileUrl = documentDirectoryUrl.appendingPathComponent("Recipes.json")
+                        
+                        let recipeArray = ["title" : self.titleWritten, "category" : self.categories[self.index], "ingredients" : self.ingredientsList, "steps": self.stepsList] as [String : Any]
+
+                        let encoder = JSONEncoder()
+                        
+                        let data = try! encoder.encode([RecipeModel].self, from: data)
+                        print(data)
+                        
+                        print(recipeArray)*/
+
+                        /*
+                         let recipe = RecipeModel(title: self.titleWritten, category: self.categories[self.index], ingredients: self.ingredientsList, steps: self.stepsList)
+                        let encoder = JSONEncoder()
+                        
+                        let data = try! encoder.encode(recipe)
+                        print(data)*/
+                        
+                        
                     }
                 }
+                
             }
+            
         }.navigationBarTitle("Créer une recette")
     }
+    
+    func addIngredient() {
+        guard self.ingredient != "" else {return}
+        let new = self.ingredient
+        
+        self.ingredientsList.append(new)
+        print(self.ingredientsList)
+        
+        
+        self.ingredient = ""
+    }
+    
+    func addStep() {
+        guard self.step != "" else {return}
+        let new = self.step
+        
+        self.stepsList.append(new)
+        print(self.stepsList)
+        
+        
+        self.step = ""
+    }
+    
+    
 }
 
 struct CreerUneRecette_Previews: PreviewProvider {
