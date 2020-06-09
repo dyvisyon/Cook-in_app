@@ -31,7 +31,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 VStack {
-                    NavigationLink(destination: CreerUneRecette()){
+                    NavigationLink(destination: CreateRecipe()){
                         Image("notebook_rond")
                             .resizable()
                             .frame(width: 110, height: 110, alignment: .center)
@@ -43,7 +43,7 @@ struct ContentView: View {
                 .padding(.bottom, 40)
                 
                 VStack {
-                    NavigationLink(destination: MesRecettes()) {
+                    NavigationLink(destination: MyRecipes()) {
                         Image("pancakes_rond")
                             .resizable()
                             .frame(width: 110, height: 110, alignment: .center)

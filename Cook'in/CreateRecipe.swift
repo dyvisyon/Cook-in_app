@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CreerUneRecette: View {
+struct CreateRecipe: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     //@FetchRequest(fetchRequest: RecipesItem.getAllRecipesItems()) var recipesItems:FetchedResults<RecipesItem>
@@ -91,12 +91,13 @@ struct CreerUneRecette: View {
                     }
                 }
             }
-        }.navigationBarTitle("Créer une recette")
+        }.navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 
 struct CreerUneRecette_Previews: PreviewProvider {
     static var previews: some View {
-        CreerUneRecette()
+        CreateRecipe()
     }
 }

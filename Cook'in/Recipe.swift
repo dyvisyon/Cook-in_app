@@ -11,19 +11,14 @@ import SwiftUI
 struct Recipe: View {
     
     @State var jsonItem: RecipeModel
-    @State var stepCounter: Int = 0
-    
-    
-    //    func addStep() {
-    //        self.stepCounter += 1
-    //    }
     
     var body: some View {
         VStack {
             VStack {
                 Text(self.jsonItem.title)
-                    .font(.largeTitle)
+                    .font(.title)
                     .padding(.bottom, 10)
+                    .padding(.top, 20)
             }
             
             VStack {

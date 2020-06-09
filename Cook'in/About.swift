@@ -10,7 +10,6 @@ import SwiftUI
 
 struct About: View {
     var body: some View {
-        NavigationView() {
             VStack {
                 Image("logo")
                     .resizable()
@@ -44,9 +43,6 @@ struct About: View {
                 
                 Spacer()
             }
-        } .navigationBarTitle(
-        Text("A PROPOS")
-        , displayMode: .inline)
     }
 }
 

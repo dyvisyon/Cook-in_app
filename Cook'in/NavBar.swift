@@ -20,17 +20,13 @@ struct NavBar: View {
                 .tabItem {
                     Image(systemName: "house").font(.system(size: 18))
             }.tag(0)
-            MesRecettes()
-                .tabItem {
-                    Image(systemName: "book").font(.system(size: 18))
-            }.tag(1)
-            CreerUneRecette()
+            CreateRecipe()
                 .tabItem {
                     Image(systemName: "plus.circle").font(.system(size: 18))
             }.tag(2)
             About()
                 .tabItem {
-                    Image(systemName: "slider.horizontal.3").font(.system(size: 18))
+                    Image(systemName: "slider.horizontal.3").font(.system(size:	 18))
             }.tag(3)
         } .accentColor(Color(red: 0.941, green: 0.502, blue: 0.447))
     }
